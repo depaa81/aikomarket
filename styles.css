@@ -1,18 +1,23 @@
 :root{
-  --bg: #f5f0ff;        /* Background soft pink-blue */
+  --bg: #fff0f6;
   --card: #ffffff;
-  --muted: #6b5b80;
+  --muted: #8a5c72;
 
-  --accent: #4f8cff;    /* Biru utama */
-  --accent-2: #ff4da6;  /* Pink untuk hover / aksen */
+  --accent: #ff4da6;
+  --accent-2: #e60073;
 
-  --success: #ff6ec7;   /* Pink fresh (ganti hijau) */
+  --success: #ff85c1;
 }
+
 /* Global */
 * { box-sizing: border-box; font-family: Inter, system-ui, Arial, sans-serif; margin: 0; padding: 0; }
+
 body { 
-  background: linear-gradient(180deg, #f5f0ff, #ffd6ec); 
-} color: #0f172a; min-height: 100vh; }
+  background: linear-gradient(180deg, #fff0f6, #ffcce6);
+  color: #0f172a;
+  min-height: 100vh;
+}
+
 .container { max-width: 920px; margin: 18px auto; padding: 14px; }
 
 /* TOPBAR */
@@ -44,14 +49,20 @@ body {
 
 /* PRODUCT */
 .product-list{ display:flex; flex-direction:column; gap:10px; }
-.product{ display:flex; align-items:center; gap:10px; padding:10px; border-radius:10px; border:1px solid #d6e4ff; }
+.product{
+  display:flex; align-items:center; gap:10px;
+  padding:10px; border-radius:10px;
+  border:1px solid #ffd6ec;
+}
+
 .thumb{
   width:64px; height:44px;
   border-radius:8px;
-  background:linear-gradient(180deg,#d6e4ff,#c0d4ff);
+  background:linear-gradient(180deg,#ffd6ec,#ffb3d9);
   display:flex; justify-content:center; align-items:center;
   font-weight:700; color:var(--accent);
 }
+
 .pmeta{ flex:1; } 
 .pmeta h3{ font-size:1rem; margin:0; }
 .pmeta p{ color:var(--muted); margin-top:6px; font-size:.9rem; }
@@ -65,9 +76,7 @@ body {
   cursor:pointer;
   transition:.15s;
 }
-.buy:hover{ 
-  background: var(--accent-2); 
-}
+.buy:hover{ background:var(--accent-2); }
 
 /* ORDER */
 .card.empty{
@@ -82,8 +91,8 @@ body {
 .proof-preview{ max-width:100%; margin-top:8px; border-radius:8px; }
 
 .btn{ padding:8px 10px; border-radius:10px; border:0; cursor:pointer; transition:.2s; }
-.btn.ghost{ background:transparent; border:1px solid #c8d9ff; color:var(--accent); }
-.btn.ghost:hover{ background:#e0ecff; }
+.btn.ghost{ background:transparent; border:1px solid #ffd6ec; color:var(--accent); }
+.btn.ghost:hover{ background:#ffe6f2; }
 
 .btn.success{ background:var(--success); color:white; }
 
@@ -95,7 +104,7 @@ body {
   position:fixed;
   right:20px; bottom:20px;
   width:60px; height:60px;
-  background:#1ebe5d;
+  background:var(--accent);
   display:flex; justify-content:center; align-items:center;
   border-radius:50%; cursor:pointer;
   box-shadow:0 6px 18px rgba(0,0,0,0.25);
@@ -127,13 +136,18 @@ body {
 .wa-avatar{ width:80px; height:80px; border-radius:50%; object-fit:cover; }
 .wa-name{ font-size:1.1rem; font-weight:bold; }
 .wa-status{margin:4px 0 16px;color:var(--success);font-weight:600;}
-.wa-status .dot{width:10px;height:10px;border-radius:50%;background:var(--success);display:inline-block;margin-right:6px;animation:pulse 1s infinite ease-in-out;}
+.wa-status .dot{
+  width:10px;height:10px;border-radius:50%;
+  background:var(--success);
+  display:inline-block;margin-right:6px;
+  animation:pulse 1s infinite ease-in-out;
+}
 
 .wa-btn{
   width:100%; padding:12px;
   border-radius:8px;
   border:0;
-  background:#1ebe5d;
+  background:var(--accent);
   color:white; cursor:pointer;
 }
 
@@ -154,6 +168,7 @@ body {
 }
 .wa-info-title{ color:var(--accent); font-weight:800; }
 .wa-info-text{ margin-top:10px; text-align:left; line-height:1.45rem; }
+
 .wa-info-btn{
   margin-top:18px;
   width:100%;
@@ -195,8 +210,8 @@ body {
 /* DRAWER */
 .drawer-item{
   width:100%;
-  background:#e0ecff;
-  border:1px solid #c8d9ff;
+  background:#ffe6f2;
+  border:1px solid #ffd6ec;
   padding:12px;
   border-radius:10px;
   font-size:1rem;
@@ -206,21 +221,21 @@ body {
   transition:.15s;
   margin-bottom:12px;
 }
-.drawer-item:hover{ background:#d4e5ff; transform:translateX(4px); }
+.drawer-item:hover{ background:#ffd6ec; transform:translateX(4px); }
 
 /* Voucher Input */
 .voucher-input{
   width:100%; padding:12px 14px;
   border-radius:12px;
-  border:2px solid #c8d9ff;
-  background:#edf3ff;
+  border:2px solid #ffd6ec;
+  background:#fff0f6;
   outline:none;
   transition:.2s;
 }
 .voucher-input:focus{
   border-color:var(--accent);
-  background:#e4edff;
-  box-shadow:0 0 0 3px rgba(13,110,253,.25);
+  background:#ffe6f2;
+  box-shadow:0 0 0 3px rgba(255,77,166,.25);
 }
 
 #applyVoucherBtn{
@@ -235,7 +250,7 @@ body {
 }
 #applyVoucherBtn:hover{ background:var(--accent-2); }
 
-/* Dropdown Sosmed */
+/* Dropdown */
 .dropdown-header{
   font-size:1.1rem;
   color:var(--accent);
@@ -263,8 +278,9 @@ body {
 
 /* Smooth scroll */
 html { scroll-behavior:smooth; }
+
 .qty-btn {
-  background:#0d6efd;
+  background:var(--accent);
   color:white;
   border:none;
   padding:5px 10px;
