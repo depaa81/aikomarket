@@ -7,27 +7,68 @@ document.addEventListener("DOMContentLoaded", () => {
   const BOT_TOKEN = "6950291703:AAHKeH8t8XlYoIjHR8XL_33oUOejTQyHkDs";
   const CHAT_ID = "5800113255";
 
-  const products = [
-    { id: 1, name: "ROBLOX FISH IT COIN VIA MITOS PER 1M", price: 12000 },
-    { id: 2, name: "ROBLOX AKUN FISH IT ELEMENT ROD POLOSAN (SPEK KE WA CS)", price: 100000 },
-    { id: 3, name: "ROBLOX AKUN FISH IT GHOSTFIN ROD (SPEK KE WA CS)", price: 65000 },
-    { id: 4, name: "ROBLOX FISH IT SC TUMBAL", price: 10000 },
-    { id: 5, name: "ROBLOX FISH IT SC ACIENT LOCHNESS 290TON", price: 85000 },
-    { id: 6, name: "ROBLOX FISH IT JOKI AFK 1D", price: 7000 },
-    { id: 7, name: "ROBLOX FISH IT JOKI GHOSTFIN ROD (WAJIB PUNYA HAZMAT ROD/ARES ROD)", price: 80000 },        
-    { id: 8, name: "ROBLOX FISH IT JOKI ELEMENT ROD (WAJIB PUNYA GHOSTFIN)", price: 100000 },
-    { id: 9, name: "ROBLOX FISH IT JOKI ARES ROD", price: 35000 },
-    { id: 10, name: "ROBLOX FISH IT JOKI HAZMAT ROD", price: 15000 },
-    { id: 11, name: "ROBLOX FISH IT JOKI ANGLER ROD", price: 50000 },
-    { id: 12, name: "ROBLOX FISH IT JOKI ROYAL BAIT", price: 10000 },
-    { id: 13, name: "ROBLOX FISH IT JOKI CORRUPT BAIT", price: 15000 },
-    { id: 14, name: "ROBLOX FISH IT JOKI AETHER BAIT", price: 23000 },
-    { id: 15, name: "ROBLOX FISH IT JOKI SINGULARITY BAIT", price: 50000 },
-    { id: 16, name: "ROBLOX FISH IT JOKI BOART MINI YATCH", price: 10000 },
-    { id: 17, name: "ROBLOX FISH IT JOKI MAP SECRED TEMPLE", price: 8000 },
-    { id: 18, name: "ROBLOX FISH IT JOKI FLORAL BAIT", price: 45000 },
-    { id: 19, name: "ROBLOX FISH IT IKAN LABA-LABA", price: 15000 },
-  ];
+  // =======================
+// DATA PRODUK (AIKOLUV)
+// =======================
+const products = [
+
+  // 🎬 JASA EDIT
+  {id:1,name:"JJ 1 Menit",price:15000,category:"edit"},
+  {id:2,name:"JJ Basic",price:8000,category:"edit"},
+  {id:3,name:"JJ Medium",price:10000,category:"edit"},
+  {id:4,name:"JJ Premium",price:20000,category:"edit"},
+  {id:5,name:"JJ Custom",price:0,category:"edit"},
+
+  // 🎨 DESIGN
+  {id:6,name:"Canva Basic",price:5000,category:"design"},
+  {id:7,name:"Canva Medium",price:10000,category:"design"},
+  {id:8,name:"Canva Premium",price:15000,category:"design"},
+  {id:9,name:"Logo",price:5000,category:"design"},
+  {id:10,name:"Poster",price:8000,category:"design"},
+
+  // 📱 APK
+  {id:11,name:"Alight Motion 1 Tahun",price:4000,category:"apk"},
+
+  {id:12,name:"Canva 7 Day",price:6000,category:"apk"},
+  {id:13,name:"Canva 14 Day",price:12000,category:"apk"},
+  {id:14,name:"Canva 1 Month",price:14000,category:"apk"},
+
+  {id:15,name:"CapCut Pro 7 Day",price:7000,category:"apk"},
+  {id:16,name:"CapCut Pro 1 Month",price:14000,category:"apk"},
+  {id:17,name:"CapCut Pro 45 Day",price:19000,category:"apk"},
+
+  {id:18,name:"YouTube Premium 1 Month",price:7500,category:"apk"},
+  {id:19,name:"YouTube Premium 2 Month",price:15000,category:"apk"},
+
+  {id:20,name:"Viu Premium 1 Tahun",price:5000,category:"apk"},
+
+  {id:21,name:"Wink 7 Day",price:3000,category:"apk"},
+  {id:22,name:"Wink 1 Month",price:6000,category:"apk"},
+
+  {id:23,name:"Spotify 1 Month",price:25000,category:"apk"},
+  {id:24,name:"Spotify 2 Month",price:45000,category:"apk"},
+
+  // Bstation
+  {id:25,name:"Bstation Sharing 1 Bulan",price:8000,category:"apk"},
+  {id:26,name:"Bstation Sharing 3 Bulan",price:23000,category:"apk"},
+  {id:27,name:"Bstation Sharing 1 Tahun",price:25000,category:"apk"},
+  {id:28,name:"Bstation Private 1 Bulan",price:30000,category:"apk"},
+
+  // Netflix
+  {id:29,name:"Netflix 2 User 1 Hari",price:3000,category:"apk"},
+  {id:30,name:"Netflix 2 User 1 Minggu",price:9000,category:"apk"},
+  {id:31,name:"Netflix 2 User 1 Bulan",price:20000,category:"apk"},
+
+  {id:32,name:"Netflix 1 User 1 Hari",price:4000,category:"apk"},
+  {id:33,name:"Netflix 1 User 1 Minggu",price:10000,category:"apk"},
+  {id:34,name:"Netflix 1 User 1 Bulan",price:25000,category:"apk"},
+
+  // Loklok
+  {id:35,name:"Loklok Sharing Basic 1 Bulan",price:20000,category:"apk"},
+  {id:36,name:"Loklok Sharing Standar 1 Bulan",price:25000,category:"apk"},
+  {id:37,name:"Loklok Private Basic 1 Bulan",price:60000,category:"apk"},
+  {id:38,name:"Loklok Private Standar 1 Bulan",price:90000,category:"apk"}
+];
 
   function formatRupiah(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
