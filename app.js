@@ -291,7 +291,7 @@ const products = [
     if (!wa) return;
 
     wa.href =
-      "https://wa.me/62856935420220?text=" +
+      "https://wa.me/62895410796933?text=" +
       encodeURIComponent(
         `Halo kak, saya sudah melakukan pemesanan.\n\n` +
         `ID Pesanan: ${currentOrder.id}\n` +
@@ -384,7 +384,7 @@ document.addEventListener("click", (e) => {
   };
 
   waCSLink.href =
-    "https://wa.me/62856935420220?text=" +
+    "https://wa.me/62895410796933?text=" +
     encodeURIComponent("Halo admin, saya butuh bantuan Customer Service.");
 
   /* ===========================
