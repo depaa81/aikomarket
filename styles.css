@@ -293,6 +293,8 @@ html { scroll-behavior:smooth; }
   text-align:center;
   font-weight:bold;
 }
-..sidebar a {
+.sidebar a,
+.sidebar a:visited,
+.sidebar a:active {
   color: #EC4899 !important;
 }
