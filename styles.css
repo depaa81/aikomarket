@@ -298,3 +298,9 @@ html { scroll-behavior:smooth; }
 .sidebar a:active {
   color: #EC4899 !important;
 }
+
+.sidebar a,
+.sidebar a span,
+.sidebar a div {
+  color: #EC4899 !important;
+}
