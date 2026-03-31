@@ -4,8 +4,8 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  const BOT_TOKEN = "6950291703:AAHKeH8t8XlYoIjHR8XL_33oUOejTQyHkDs";
-  const CHAT_ID = "5800113255";
+  const BOT_TOKEN = "8584528083:AAGaRQptiUxf6yxnBEIOHxkwriW8hqVO1PE";
+  const CHAT_ID = "5733132494";
 
   // =======================
 // DATA PRODUK (AIKOLUV)
